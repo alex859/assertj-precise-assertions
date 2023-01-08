@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e9023db-4bc9-4c16-ba14-03c6f073fd30" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/assertj/core/condition/AssertJKotlinTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/assertj/core/condition/AssertJKotlinTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/assertj/core/condition/CollectionConditionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/assertj/core/condition/CollectionConditionsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +60,7 @@
       <recent name="org.assertj.core.condition" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AssertJKotlinTest">
+  <component name="RunManager" selected="JUnit.CollectionConditionsTest">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
       <setting name="bbPath" value="" />
@@ -117,7 +116,7 @@
       <module name="assertj-precise-assertions" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="domain.*" />
+          <option name="PATTERN" value="org.assertj.core.condition.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,17 +127,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NestableConditionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CollectionConditionsTest.containsHouseSucceds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="assertj-precise-assertions" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="domain.*" />
+          <option name="PATTERN" value="org.assertj.core.condition.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.assertj.core.condition" />
-      <option name="MAIN_CLASS_NAME" value="org.assertj.core.condition.NestableConditionTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="org.assertj.core.condition.CollectionConditionsTest" />
+      <option name="METHOD_NAME" value="containsHouseSucceds" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CollectionConditionsTest.elementAtSuccedes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="assertj-precise-assertions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.assertj.core.condition.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.assertj.core.condition" />
+      <option name="MAIN_CLASS_NAME" value="org.assertj.core.condition.CollectionConditionsTest" />
+      <option name="METHOD_NAME" value="elementAtSuccedes" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,10 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CollectionConditionsTest" />
+        <item itemvalue="JUnit.CollectionConditionsTest.elementAtSuccedes" />
+        <item itemvalue="JUnit.CollectionConditionsTest.containsHouseSucceds" />
         <item itemvalue="JUnit.AssertJKotlinTest" />
         <item itemvalue="JUnit.StriktTest" />
-        <item itemvalue="JUnit.NestableConditionTest" />
-        <item itemvalue="JUnit.CollectionConditionsTest" />
       </list>
     </recent_temporary>
   </component>
