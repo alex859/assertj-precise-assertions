@@ -1,5 +1,8 @@
 package org.assertj.core.condition;
 
+import domain.Address;
+import domain.House;
+import domain.Person;
 import org.assertj.core.api.Condition;
 
 import java.util.List;

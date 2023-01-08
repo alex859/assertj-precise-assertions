@@ -1,5 +1,7 @@
 package org.assertj.core.condition;
 
+import domain.Address;
+import domain.House;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
