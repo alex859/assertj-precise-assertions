@@ -4,6 +4,7 @@ import org.assertj.core.api.Condition;
 import org.assertj.core.description.Description;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.StreamSupport;
 
 import static org.assertj.core.condition.NestableCondition.nestable;
@@ -51,6 +52,15 @@ public class CollectionsConditions {
                 }
             };
         }
+    }
+
+    @SafeVarargs
+    public static <K, V> Condition<Map<? extends K, ? extends V>> elementWithKey(K key, Condition<V>... conditionsOnElement) {
+        return nestable(
+                String.format("element with key '%s'", key),
+                elements -> elements.get(key),
+                conditionsOnElement
+        );
     }
 }
 

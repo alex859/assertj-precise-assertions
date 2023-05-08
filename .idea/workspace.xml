@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e9023db-4bc9-4c16-ba14-03c6f073fd30" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/assertj/core/condition/CollectionsConditions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/assertj/core/condition/CollectionsConditions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/assertj/core/condition/CollectionConditionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/assertj/core/condition/CollectionConditionsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,13 +25,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2ImGVlZsJFvjorCjEN4zvmT2OeS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -40,17 +35,23 @@
     <option name="showLibraryContents" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/alex859/Workspace/opensource/assertj-precise-assertions/src/test/java/org/assertj/core/condition&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/alex859/Workspace/opensource/assertj-precise-assertions/src/test/java/org/assertj/core/condition",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "TEXT"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/java/org/assertj/core/condition" />
@@ -60,7 +61,7 @@
       <recent name="org.assertj.core.condition" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.java in assertj-precise-assertions">
+  <component name="RunManager" selected="JUnit.CollectionConditionsTest">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
       <setting name="bbPath" value="" />
@@ -112,7 +113,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CollectionConditionsTest.containsHouseSucceds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CollectionConditionsTest.elementAtMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="assertj-precise-assertions" />
       <extension name="coverage">
         <pattern>
@@ -122,13 +123,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.assertj.core.condition" />
       <option name="MAIN_CLASS_NAME" value="org.assertj.core.condition.CollectionConditionsTest" />
-      <option name="METHOD_NAME" value="containsHouseSucceds" />
+      <option name="METHOD_NAME" value="elementAtMessage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CollectionConditionsTest.elementAtSuccedes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CollectionConditionsTest.keyFails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="assertj-precise-assertions" />
       <extension name="coverage">
         <pattern>
@@ -138,13 +139,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.assertj.core.condition" />
       <option name="MAIN_CLASS_NAME" value="org.assertj.core.condition.CollectionConditionsTest" />
-      <option name="METHOD_NAME" value="elementAtSuccedes" />
+      <option name="METHOD_NAME" value="keyFails" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NestableConditionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CollectionConditionsTest.keyFailsWithMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="assertj-precise-assertions" />
       <extension name="coverage">
         <pattern>
@@ -153,8 +154,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.assertj.core.condition" />
-      <option name="MAIN_CLASS_NAME" value="org.assertj.core.condition.NestableConditionTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="org.assertj.core.condition.CollectionConditionsTest" />
+      <option name="METHOD_NAME" value="keyFailsWithMessage" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -169,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.java in assertj-precise-assertions" />
-        <item itemvalue="JUnit.NestableConditionTest" />
         <item itemvalue="JUnit.CollectionConditionsTest" />
-        <item itemvalue="JUnit.CollectionConditionsTest.elementAtSuccedes" />
-        <item itemvalue="JUnit.CollectionConditionsTest.containsHouseSucceds" />
+        <item itemvalue="JUnit.CollectionConditionsTest.keyFailsWithMessage" />
+        <item itemvalue="JUnit.CollectionConditionsTest.elementAtMessage" />
+        <item itemvalue="JUnit.CollectionConditionsTest.keyFails" />
+        <item itemvalue="JUnit.java in assertj-precise-assertions" />
       </list>
     </recent_temporary>
   </component>
