@@ -127,6 +127,11 @@ public class NestableCondition<ACTUAL, NESTED> extends Join<ACTUAL> {
         return new NestableCondition<>(descriptionPrefix, stream(conditions), extractor);
     }
 
+    public static <ACTUAL, NESTED> Condition<ACTUAL> nestable(String descriptionPrefix, Function<ACTUAL, NESTED> extractor,
+                                                              List<Condition<? super NESTED>> conditions) {
+        return new NestableCondition<>(descriptionPrefix, conditions.stream(), extractor);
+    }
+
     /**
      * Creates a new <code>{@link NestableCondition}</code>
      * @param descriptionPrefix the prefix to use to build the description

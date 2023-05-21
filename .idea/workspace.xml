@@ -22,6 +22,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -40,11 +43,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "improve-collection-conditions",
     "last_opened_file_path": "/home/alex859/Workspace/opensource/assertj-precise-assertions/src/test/java/org/assertj/core/condition",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap"
   },
   "keyToStringList": {
     "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
@@ -172,9 +176,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CollectionConditionsTest" />
-        <item itemvalue="JUnit.CollectionConditionsTest.keyFailsWithMessage" />
         <item itemvalue="JUnit.CollectionConditionsTest.elementAtMessage" />
         <item itemvalue="JUnit.CollectionConditionsTest.keyFails" />
+        <item itemvalue="JUnit.CollectionConditionsTest.keyFailsWithMessage" />
         <item itemvalue="JUnit.java in assertj-precise-assertions" />
       </list>
     </recent_temporary>
@@ -189,5 +193,9 @@
       <updated>1670779372202</updated>
     </task>
     <servers />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

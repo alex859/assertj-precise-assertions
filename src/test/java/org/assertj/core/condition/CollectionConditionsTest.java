@@ -138,6 +138,39 @@ class CollectionConditionsTest {
     }
 
     @Test
+    void elementAtFailsWithMessageWhenMissingIndex() {
+        var house1 = new House(12, "bricks");
+        var house2 = new House(1, "bricks");
+        var address = new Address("line 1", "line 2", "E31QT", List.of(house1, house2));
+
+        assertThatThrownBy(() -> assertThat(address).has(
+                houses(
+                        elementAt(0, house(area(2), wallType("bricks"))),
+                        elementAt(1, house(area(1), wallType("bricks"))),
+                        elementAt(2, house(area(4), wallType("cement")))
+                )
+
+        )).hasMessageContaining("""
+                [✗] houses:[
+                   [✗] element at 0:[
+                      [✗] house:[
+                         [✗] area: 2 but was 12,
+                         [✓] wall type: bricks
+                      ]
+                   ],
+                   [✓] element at 1:[
+                      [✓] house:[
+                         [✓] area: 1,
+                         [✓] wall type: bricks
+                      ]
+                   ],
+                   [✗] element at 2:[
+                      missing element with index 2
+                   ]
+                ]""".stripIndent());
+    }
+
+    @Test
     void keyFails() {
         var house1 = new House(12, "bricks");
         var house2 = new House(1, "bricks");
@@ -149,10 +182,10 @@ class CollectionConditionsTest {
                         elementWithKey("house 2", house(area(1), wallType("bricks")))
                 )
         ));
-    }   
+    }
     
     @Test
-    void keyFailsWithMessage() {
+    void keyFailsWithMessageWhenMissingKey() {
         var house1 = new House(12, "bricks");
         var house2 = new House(1, "bricks");
         var map = Map.of("house 1", house1, "house 2", house2);
@@ -160,7 +193,8 @@ class CollectionConditionsTest {
         assertThatThrownBy(() -> assertThat(map).has(
                 allOf(
                         elementWithKey("house 1", house(area(2), wallType("bricks"))),
-                        elementWithKey("house 2", house(area(1), wallType("bricks")))  
+                        elementWithKey("house 2", house(area(1), wallType("bricks"))),
+                        elementWithKey("house 3", house(area(11), wallType("bricks")))
                 )
         )).hasMessageContaining("""
                 [✗] all of:[
@@ -175,6 +209,9 @@ class CollectionConditionsTest {
                          [✓] area: 1,
                          [✓] wall type: bricks
                       ]
+                   ],
+                   [✗] element with key 'house 3':[
+                      missing key 'house 3'
                    ]
                 ]""".stripIndent());
     }

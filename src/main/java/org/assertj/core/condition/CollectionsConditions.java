@@ -2,6 +2,7 @@ package org.assertj.core.condition;
 
 import org.assertj.core.api.Condition;
 import org.assertj.core.description.Description;
+import org.assertj.core.description.TextDescription;
 
 import java.util.List;
 import java.util.Map;
@@ -14,13 +15,18 @@ public class CollectionsConditions {
         return new Contains<>(conditionOnElement);
     }
 
-    @SafeVarargs
-    public static <V> Condition<List<? extends V>> elementAt(int index, Condition<V>... conditionsOnElement) {
+    public static <V> Condition<List<? extends V>> elementAt(int index, Condition<V> conditionsOnElement) {
         return nestable(
                 String.format("element at %s", index),
-                elements -> elements.get(index),
-                conditionsOnElement
+                elements -> getOrNull(elements, index),
+                checkingNull(conditionsOnElement, "missing element with index %s".formatted(index))
         );
+    }
+    
+    private static <T> T getOrNull(List<? extends T> list, int index) {
+        return list.size() > index 
+                ? list.get(index) 
+                : null;
     }
 
     private static class Contains<T> extends Join<Iterable<? extends T>> {
@@ -54,13 +60,28 @@ public class CollectionsConditions {
         }
     }
 
-    @SafeVarargs
-    public static <K, V> Condition<Map<? extends K, ? extends V>> elementWithKey(K key, Condition<V>... conditionsOnElement) {
+    public static <K, V> Condition<Map<K, V>> elementWithKey(K key, Condition<? super V> conditionsOnElement) {
         return nestable(
                 String.format("element with key '%s'", key),
                 elements -> elements.get(key),
-                conditionsOnElement
+                checkingNull(conditionsOnElement, "missing key '%s'".formatted(key))
         );
+    }
+    
+    private static <V> Condition<V> checkingNull(Condition<V> condition, String message) {
+        return new Condition<>(condition.description()) {
+            @Override
+            public boolean matches(V value) {
+                return value != null && condition.matches(value);
+            }
+
+            @Override
+            public Description conditionDescriptionWithStatus(V actual) {
+                return actual == null 
+                        ? new TextDescription(message) 
+                        : condition.conditionDescriptionWithStatus(actual);
+            }
+        };
     }
 }
 
